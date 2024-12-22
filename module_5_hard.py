@@ -6,12 +6,6 @@ class User:
         self.password = hash(password)
         self.age = age
 
-    def __str__(self):
-        return f"User(nickname='{self.nickname}', age={self.age})"
-
-    def __repr__(self):
-        return f"User(nickname='{self.nickname}', age={self.age})"
-
     def __eq__(self, other):
         if isinstance(other, User):
             return self.nickname == other.nickname and self.password == other.password
@@ -23,12 +17,6 @@ class Video:
         self.duration = duration
         self.time_now = time_now
         self.adult_mode = adult_mode
-
-    def __str__(self):
-        return f"Video(title='{self.title}', duration={self.duration}, adult_mode={self.adult_mode})"
-
-    def __repr__(self):
-        return f"Video(title='{self.title}', duration={self.duration}, adult_mode={self.adult_mode})"
 
     def __eq__(self, other):
         if isinstance(other, Video):
