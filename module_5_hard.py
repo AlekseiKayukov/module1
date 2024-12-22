@@ -31,10 +31,10 @@ class UrTube:
 
     def log_in(self, nickname, password):
         for user in self.users:
-            if user == User(nickname, password, 0):
+            if user.nickname == nickname and user.password == hash(password):
                 self.current_user = user
                 return
-        print("Пользователь не найден или пароль введен неверно.")
+        print("Пользователь не найден или пароль неверный.")
 
     def register(self, nickname, password, age):
         for user in self.users:
